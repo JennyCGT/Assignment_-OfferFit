@@ -22,7 +22,8 @@ def get_home():
     return "Hello World"
 
 
-
+# I use a FastAPI framweork because it's easy to manage for validate the input data I have decided to use BaseModel from pydantic 
+# in order to check that the json contain the main information and the extra would be filled with empty value
 @app.post("/event-subscription/hook", response_model=str)
 async def new_event( data:  Annotated[EventInput, Body(embed=True)]):
     new_line = ','.join(str(val) for val in data.model_dump().values())
