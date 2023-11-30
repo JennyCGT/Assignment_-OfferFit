@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from typing import Annotated, List
 
 import numpy as np
-from schemas import EventInput
+from app.schemas import EventInput
 from fastapi import FastAPI, Query, Response, Body
 from datetime import date
 import pandas as pd
@@ -40,7 +40,5 @@ async def get_all_event_by_customer(
     data_csv.replace(np.nan,None,  inplace=True)
 
     data_customer = data_csv.loc[data_csv['customer_id']== customer_id ]
-    print( data_customer.to_dict(orient='records'))
     response_data = [EventInput(**record) for record in data_customer.to_dict(orient='records')]
-    print(response_data)
     return response_data

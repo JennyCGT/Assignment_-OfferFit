@@ -1,5 +1,0 @@
-customer_id,event_type,timestamp,email_id,clicked_link,product_id,amount 
-123,email_click,2023-10-23T14:30:00,1234,https://example.com/some-link,None,None
-456,email_open,2023-10-24T11:30:00,998,None,None,None
-456,email_unsubscribe,2023-10-24T11:30:25,998,None,None,None
-123,purchase,25-10-2023T15:33:00,1234,None,357,49.99
