@@ -1,5 +1,6 @@
 # Assignment_-OfferFit
 
+
 Generate a environment python 
 python -m venv venv
 
@@ -12,4 +13,6 @@ pip install -r requirements.txt
 Run Server Localhost
 uvicorn app.main:app  
 
-f
+
+Run Test 
+pytest 
